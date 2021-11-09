@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial Javascript Dasar</title>
+<script> 
+    document.writeln(`<p>Hello World</p>`); //Hello world text
+    
+    //Tipe Data Number
+    document.writeln(100); //Number bil bulat
+    document.writeln('</br>');
+    document.writeln(23.44); //Number bil desimal
+    document.writeln('</br>');
+
+    //Number Notation
+    document.writeln(0b11100); //bil binary
+    document.writeln('</br>');
+    document.writeln(0xBA); //bil hexa
+    document.writeln('</br>');
+    document.writeln(0o123); //bil octal
+    document.writeln('</br>');
+
+    //Tipe Data Boolean
+    document.writeln(true); //true
+    document.writeln('</br>');
+    document.writeln(false); //false
+    document.writeln('</br>');
+
+    //Tipe Data String (Text)
+    document.writeln('Oriza Sativa');
+    document.writeln('</br>');
+    document.writeln('Belajar Bahasa Pemrograman Javascript Dasar');
+    document.writeln('</br>');
+    document.writeln('Nama = ' + 'Oriza ' + 'Sativa'); //Menambah string
+    document.writeln('</br>');
+
+    //Escape Sequence
+    document.writeln("<textarea cols='35' rows='6'>");
+    document.writeln("Oriza \nSativa"); //ENTER
+    document.writeln("Home\\Oriza\\"); //Tanda (\)
+    document.writeln("\"Oriza Sativa\""); //Tanda (")
+    document.writeln("\'Belajar Javascript Dasar\'"); //Tanda (')
+    document.writeln("</textarea>");
+    document.writeln("</br>");
+
+    //Variable
+    let fullName = 'Oriza Sativa'; //variable 'let' (valuenya bisa diubah)
+    document.writeln(fullName);
+    document.writeln('</br>');
+    const firstName = 'Oriza'; //variable 'const' (valuenya tetap)
+    const lastName = 'Sativa';
+    document.writeln(`${firstName} ${lastName} is my name.`);
+
+    //Operasi Perbandingan
+    let result = 5 == '5'; //sama dengan (=)
+    document.writeln('<p>' + result + '</p>'); //true
+    
+    result = 5 === '5'; //sama dengan dan sama tipe (===)
+    document.writeln('<p>' + result + '</p>'); //false
+
+    result = 5 > 10; //lebih besar dari (>)
+    document.writeln('<p>' + result + '</p>'); //false
+
+    result = 5 < 10; //lebih kecil dari (<)
+    document.writeln('<p>' + result + '</p>'); //true
+    
+    //Operator logika AND
+    const nilaiUjian = 80;
+    const nilaiAbsensi = 90;
+
+    const lulusUjian = nilaiUjian > 75;
+    document.writeln(lulusUjian);
+    const lulusAbsensi = nilaiAbsensi > 80;
+    document.writeln(lulusAbsensi);
+
+    const lulus = lulusUjian && lulusAbsensi; //AND
+    document.writeln(lulus);
+    
+    //Operator logika OR 
+    const lulusBersyarat = lulusUjian || lulusAbsensi; //OR
+    document.writeln(lulusBersyarat);
+
+    //Operator logika NOT
+    const gagalLulus = !(lulusUjian >= lulusAbsensi); //NOT
+    document.writeln(gagalLulus);
+    document.writeln('</br>');
+
+    //Console
+    console.debug('hello world'); //debug
+    console.info('Hello world'); //info
+    console.warn('Ini peringatan !'); //warning
+    console.error('ini error'); //error
+
+    //String tamplate
+    const person = 'Oriza Sativa';
+    const namaAwal = 'Oriza';
+    const namaAkhir = 'Sativa';
+    const template1 = `Nama = ${namaAwal} ${namaAkhir}`; //substitusi variable
+    console.info(template1);
+
+    const nilai = 80;
+    const template2 = `Nama : ${namaAwal} ${namaAkhir}, Lulus : ${nilai > 75}`; //menambah expression
+    console.info(template2);
+    
+    const multilineString = `
+     Nama saya Oriza Sativa,
+     saat ini sedang menempuh tingkat akhir kuliah,
+     kegiatan favorit adalah tidur.`; //multiline string 
+     document.writeln('<pre>');
+     document.writeln(multilineString);
+     document.writeln('</pre>');
+
+    //Konversi string ke number
+    const value1 = parseInt('1'); //konversi dari string ke number
+    const value2 = 1;
+    const sum = value1 + value2;
+    document.writeln(`<p>${sum}</p>`); //hasilnya tipe data number
+    document.writeln(`<p>${parseInt('1.9')}</p>`); //konversi ke number (berupa integer atau bilangan dibelakang koma dihiraukan)
+    document.writeln(`<p>${parseFloat('2.3')}</p>`); //konversi string ke number (bilangan bulat pecahan)
+    document.writeln(`<p>${Number('3.22')}</p>`); //konversi string ke number (bil. bulat atau bil. pecahan)
+
+    //Konversi number ke string
+    const num1 = 2;
+    const num2 = 3;
+    const total = num1.toString() + num2.toString(); //number dikonversi menjadi string
+    document.writeln(`<p>${total}</p>`);
+
+    //NaN (Not a Number)
+    document.writeln(`<p>${parseInt('salah')}</p>`); //NaN
+    document.writeln(`<p>${parseFloat('1.3text')}</p>`); //1.3 (masih ditolelir)
+    // Number() tidak akan mentolelir kesalahan pada data
+    document.writeln(`<p>${Number('2.3Ups')}</p>`); //NaN
+    document.writeln(`<p>${Number('1x')}</p>`); //NaN
+    document.writeln(`<p>${Number('bukan number')}</p>`); //NaN
+    //Operasi pada NaN 
+    const no1 = Number('bukan number'); //NaN
+    const no2 = 231; //Tipe data number
+    const total2 = no1 + no2; //hasilnya akan NaN
+    document.writeln(`<p>${total2}</p>`); //NaN bila dioperasikan dengan tipe data apapun, hasilnya akan tetap NaN
+    //isNaN(number) untuk mengecek apakah suatu variable NaN atau bukan
+    document.writeln(`<p>${isNaN(no1)}</p>`); //true
+    document.writeln(`<p>${isNaN(no2)}</p>`); //false
+
+    //Tipe data array
+    const names = []; //array kosong
+    names.push('Oriza'); //value pada index ke 0
+    names.push('Sativa','padi'); //value index ke 1 dan 2
+    console.table(names);
+    console.info(names.length); //mencari tahu panjang array (dimulai dari 1) 
+    console.info(names[0]); //mencari tahu nilai pada index ke 0
+
+    names[2] = 'rice'; //mengganti nilai pada index ke 2
+    console.table(names);
+
+    delete names[1]; //menghapus nilai array pada index ke 1
+    console.table(names);
+
+    names.push('adalah'); //menambahkan nilai pada array, dan ditempatkan pada urutan terakhi array
+    console.table(names);
+
+    //Object pada Javascript
+    const orang1 = {}; //object kosong
+    orang1['nama'] = 'Oriza Sativa';
+    orang1['NPM']  = '177002067';
+    orang1['Umur'] = '22';
+    console.table(orang1);
+    delete orang1['Umur'];
+    console.table(orang1);
+
+    const orang2 = {
+        ttl :'10 April 1999',
+        alamat : 'Indramayu',
+        domisili : 'Tasikmalaya'
+    };
+    console.table(orang2);
+
+    const orang3 = {
+        zodiak :'Aries',
+        'saudara kandung': 2,
+        hobi :'tidur'
+    };
+    console.info(`zodiak : ${orang3.zodiak}`);
+    console.info(`saudara kandung : ${orang3['saudara kandung']}`);
+    console.info(`hobi : ${orang3.hobi}`);
+
+</script>
+</head>
+<body>
+     
+</body>
+</html> 
