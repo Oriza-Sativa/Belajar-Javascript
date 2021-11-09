@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Javascript Lanjutan</title>
+    <script>
+        //If expression, Else Expression, Else If Expression
+        // const examValue = 70;
+        // if(examValue > 80){
+        //     document.writeln('<p>Good Job !</p>'); //if 
+        // } else if(examValue > 60) {
+        //     document.writeln('<p>Not bad.</p>'); //else if
+        // } else {
+        //     document.writeln(`<p>Try again next time.</p>`); //else
+        // }
+
+        //Pop Up
+        // alert('Hello world !'); //Alert
+
+        // const nama = prompt('Siapa nama anda ?'); //Prompt
+        // alert(`Hello ${nama}`);
+
+        // const masuk = confirm('Anda yakin mau masuk ?'); //Confirm
+        // if (masuk){
+        //     const nama1 = prompt('Siapa nama anda ?');
+        //     alert(`Selamat datang ${nama1}`);
+        // } else {
+        //     alert('Bye - bye.');
+        // }
+
+        //Undifined variable
+        //let name; //Undifined variable
+        // let name = 120; //Defined variable
+        // if (name === undefined){
+        //     alert('UNDIFINED');
+        // } else {
+        //     alert('DEFINED');
+        // }
+
+        //Undifined array value
+        // const name1 = ['oriza','sativa','padi'];
+        // if (name1[2]===undefined){
+        //     alert('Hello world');
+        //     console.ifo('ARRAY UNDIFINED');
+        // } else {
+        //     alert(`Hello ${name1[2]}`);
+        //     console.info('ARRAY DEFINED');
+        // }
+
+        //Undifined object property
+        //let person = {};
+        //if (person.name2 === undefined) {
+        //     alert('Hello world');
+        // } else {
+        //     alert(`Hello ${person.name2}`);
+        // }
+
+        //Null
+        // let firstName = 'Oriza';
+        // if (firstName === undefined) {
+        //     alert('Hello Undifined');
+        // } else if (firstName === null) {
+        //     alert('Hello Null');
+        // } else {
+        //     alert(`Hello ${firstName}`);
+        // }
+
+        //Switch Expression
+        //  const nilai = 'A';
+        // switch (nilai){
+        //     case 'A':
+        //         document.writeln('<p>Wow anda lulus dengan baik</p>');
+        //         break;
+        //     case 'B':
+        //     case 'C':
+        //         document.writeln('<p>Anda lulus</p>');
+        //         break;
+        //     case 'D':
+        //         document.writeln('<p>Anda tidak lulus</p>');
+        //         break;
+        //     default:
+        //         document.writeln('<p>Mungkin anda salah jurusan</p>');
+        // }
+
+        // if (nilai === 'A'){
+        //     document.writeln('<p>Wow anda lulus dengan baik</p>');
+        // } else if (nilai === 'B' || nilai === 'C'){
+        //     document.writeln('<p>Anda Lulus</p>');
+        // } else if (nilai === 'D') {
+        //     document.writeln('<p>Anda tidak lulus</p>');
+        // } else {
+        //     document.writeln('<p>Mungkin anda salah jurusan</p>');
+        // }
+
+        //Operator type of
+        // let data;
+        // const typeData = typeof data;
+        // document.writeln(`<p>${typeData}</p>`);
+
+        // if (typeof data === 'number'){
+        //     alert('number');
+        // } else if (typeof data === 'string') {
+        //     alert('string');
+        // } else if (typeof data === 'boolean') {
+        //     alert('boolean');
+        // } else if (typeof data === 'null') {
+        //     alert('null');
+        // } else if (typeof data === 'undefined') {
+        //     alert('undefined');
+        // } else {
+        //     alert('object');
+        // }
+
+        //In operator
+        // const person = {
+        //     firstName : 'oriza',
+        //     lastName : 'sativa'
+        // }
+        // const result = 'firstName' in person;
+        // document.writeln(`<p>${result}</p>`);
+
+        //Ternary operator
+        // const nilai = 80;
+        // const ucapan = nilai >= 75 ? 'Selamat anda lulus' : 'Silahkan coba lagi';
+        // document.writeln(`<p>${ucapan}</p>`);
+
+        //Nullish Coalescing
+        // let data;
+        // if (data === undefined || data === null) {
+        //     data = 'Nilai default';
+        // }
+        // document.writeln(`<p>${data}</p>`);
+        // parameter = data ?? 'Nilai default';
+        // document.writeln(`<p>${parameter}</p>`);
+
+        //Optional Chaining
+        // let person = {};
+        // alert(person?.address);
+
+        //Operator logika AND dan OR di Non Boolean
+        //Operator OR
+        // console.info('hello' || ''); //hello
+        // console.info('' || []); //[]
+        // console.info('0' || 'NOL'); //'0'
+        // console.info(0 || 'Nol'); //'Nol'
+        // console.info(null || 'Null'); //'Null'
+        // console.info(undefined || 'Undefined'); //'Undefined'
+
+        // const person = {
+        //     firstName : 'Oriza',
+        //     lastName : 'Sativa'
+        // }
+        // const name = person.firstName || person.lastName;
+        // console.info(name);
+
+        // //Operator AND
+        // console.info('hello' && ''); //''
+        // console.info('' && []); //''
+        // console.info('0' && 'NOL'); //'NOL'
+        // console.info(0 && 'Nol'); //0
+        // console.info(null && 'Null'); //null
+        // console.info(undefined && 'Undefined'); //undefined
+
+        //For Loop        
+        // for(let counter = 1; counter <=10; counter ++){
+        //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        // }
+
+        //While Loop
+        // let counter = 1;
+        // while(counter<=15){
+        //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        //     counter ++;
+        // }
+
+        //Do While Loop
+        // let counter = 11;
+        // do {
+        //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        //     counter ++;
+        // }
+        // while(counter<=10);
+
+        //Break
+        // let counter = 1;
+        // while (true) {
+        //     document.writeln(`<p>Perulangan ke ${counter}</p>`);
+        //     counter ++;
+
+        //     if (counter > 10){
+        //         break;
+        //     }
+        // }
+
+        //Continue
+        // for (let i = 1; i <= 100; i++) {
+        //     if (i % 2 === 0) {
+        //         continue ;
+        //     }
+        //     document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+        // }
+
+        //For in object
+        // const person = {
+        //     firstName : 'Oriza',
+        //     lastName : 'Sativa'
+        // };
+
+        // for (const property in person){
+        //     document.writeln(`<p>Property ${property} : ${person[property]}</p>`);
+        // }
+        
+        // const names = ['Oriza', 'Sativa', 'Padi'];
+        // for (const index in names){
+        //     document.writeln(`<p>${index} : ${names[index]}</p>`);
+        // }
+
+        //For Of
+        // const names = ['Oriza', 'Sativa', 'padi'];
+        // for (const name of names) {
+        //     document.writeln(`<p>${name}</p>`);
+        // }
+        // const fullName = 'Oriza Sativa';
+        // for (const character of fullName) {
+        //     document.writeln(`<p>${character}</p>`);
+        // }
+
+        //Function
+        // function sayHello(){
+        //     document.writeln('Hello Folks!');
+        // }
+        // sayHello();
+
+        //Function Parameter
+        // function helloFolks(firstName, lastName){
+        //     document.writeln(`<p>${firstName} ${lastName}</p>`);
+        // }
+
+        // helloFolks('Oriza','Sativa');
+
+        //Function Return Value
+        // function sayMyName(name1,name2){
+        //     const myName = `<p>${name1} ${name2}, Hello Folks !</p>`;
+        //     return myName;
+        // }
+
+        // const result = sayMyName('Yogi','Baadilah');
+        // document.writeln(`<p>${result}</p>`);
+
+        // function getScore(value){
+        //     if (value > 90) {
+        //         return 'A';
+        //     } else if (value > 80) {
+        //         return 'B';
+        //     } else if (value > 70) {
+        //         return 'C';
+        //     } else if (value > 60) {
+        //         return 'D';
+        //     } else {
+        //         return 'E';
+        //     }
+
+        // }
+        // const finalValue = getScore(77);
+        // document.writeln(`<p>${finalValue}</p>`);
+
+        // function isContains(array, searchValue){
+        //     for(const element of array){
+        //         if(element === searchValue){
+        //             return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+        // console.info(isContains([1,2,3,4,5,6,7,8,9,10],3));
+
+        //Function Default Parameter
+        // function register(name, gender = 'UNKNOWN'){
+        //     console.info(name);
+        //     console.info(gender);
+        // }
+        // register();
+        // register('Oriza');
+        // register('Oriza','Female');
+
+        //Rest Parameter
+        // function sum(name, ...data){
+        //     let total = 0;
+        //     for(const item of data){
+        //         total += item;
+        //     }
+        //     document.writeln(`<p>Total ${name} is ${total}</p>`);
+        // }
+
+        // sum('Orange',2,3,4,5,6,7,8);
+        // sum('Apple',5,5,6,7,5,6);
+        // sum('Banana',9,5,2,3,4);
+        // //Spread Syntax
+        // sum('Orange',...[2,3,4,5,6,7,8]);
+        // sum('Apple',...[5,5,6,7,5,6]);
+        // sum('Banana',...[9,5,2,3,4]);
+
+        // //Spread Syntax with array on variable
+        // const value = [12,11,22,34,64];
+        // sum('Mango', ...value);
+
+        //Function menjadi value pada variabel
+        // function sayFolks (name){
+        //     document.writeln(`<p>Hello ${name} !</p>`);
+        // }
+        // let say = sayFolks;
+        // sayFolks('Oriza');
+        // say('Sativa');
+        // //Function di Parameter
+        // function giveMeName(callback){
+        //     callback('Padi');
+        // }
+        // giveMeName(sayFolks);
+        // giveMeName(say);
+
+        //Anonymous Function
+        // let say = function(name){
+        //     document.writeln(`Hello ${name} !`);
+        // }
+        // say('Orizaaa');
+
+        //Anonimous Function in Parameter
+        // function giveName(callback){
+        //     callback('Oyii');
+        // }
+        // giveName(say);
+
+        //Nested Funnction (Function di dalam Function);
+        // function outer (){
+        //     function inner(){
+        //         console.info('inner');
+        //     }
+        //     inner();
+        //     inner();
+        // }
+        // outer();
+        //inner(); //ERROR can not access inner function coz it's outside outer function, it only can be accessed inside outer function
+        
+        //Recursive Function
+        // function factorial(value){
+        //     let result = 1;
+        //     for (let i = 1; i <= value; i++){
+        //         result *= i;
+        //     }
+        //     return result;
+        // }
+        // const fact = factorial(7);
+        // document.writeln(`<p>${fact}</p>`);
+
+        // function factorialRecursive(value){
+        //     if (value === 1){
+        //         return 1;
+        //     } else {
+        //         return value * factorialRecursive(value - 1);
+        //     }
+        // }
+        // document.writeln(`${factorialRecursive(7)}`);
+
+        //Function Generator Sederhana
+        // function* createName(){
+        //     yield 'oriza';
+        //     yield 'sativa';
+        //     yield 'padi';
+        // }
+
+        // const names = createName();
+        // for(const name of names){
+        //     console.log(name);
+        // }
+
+        //Function Generator kompleks
+
+        //Lazy 
+        // function* buatGanjil(value){
+        //     for (let i = 1; i <= value; i++){
+        //         if (i % 2 === 1){
+        //             console.info(`yield ${i}`);
+        //             yield i;
+        //         }
+        //     }
+        // }
+        // const angkaGanjil = buatGanjil(100);
+        // for (angka of angkaGanjil){
+        //     console.info(`<p>${angka}</p>`);
+        // }
+        // console.info(angkaGanjil.next().value);
+        
+
+        //Eager
+        // function* buatGanjilarray(value){
+        //     const result = [];
+        //     for(let i = 1; i <= value; i++){
+        //         if (i % 2 === 1) {
+        //             console.info(`yield ${i}`);
+        //             result.push(i);
+        //         }
+        //     }
+        //     return result;
+        // }
+        // const numbers = buatGanjilarray(100);
+        // for(number of numbers){
+        //     console.info(number);
+        // }
+
+        //Arrow Function dengan block {}
+        // const sayHello = (name) => {
+        //     const say = `Hello ${name}`;
+        //     console.info(say);
+        // }
+        // sayHello('Orizazasativa');
+
+        //Arrow Function tanpa block 
+        // const sayFolks = (nama) => console.info(`Hello folks ${nama} !`);
+        // sayFolks('Oyii'); 
+
+        //Arrow Function mengembalikan value
+        // const sum = (first, second) => first + second;
+        // console.info(sum(23,22));
+
+        //Arrow Function tanpa kurung parameter (bila parameternya hanya satu)
+        // const sayHello = name => console.info(`Watsup my friend ${name} !`);
+        // sayHello('Oyeee');
+
+        //Arrow Function sebagai parameter
+        // function giveMeName(callback) {
+        //     callback('Orizaa');
+        // }
+        // giveMeName((name)=> console.info(`Hayy ${name} !`));
+
+        //bila menggunakan anonymous function
+        // giveMeName(function (nama){
+        //     console.info(`Wow hai ${nama} !`);
+        // });
+
+        //Closure
+        // function createAdder(value){
+        //     const owner = 'Oriza';
+        //     function add(param){
+        //         console.info(owner);
+        //         return value + param;
+        //     }
+        //     return add;
+        // }
+        // const addTwo = createAdder(2);
+        // console.info(addTwo(10));
+        // console.info(addTwo(22));
+
+        //Object Method (Function di Object)
+        // const person = {
+        //     name : 'Orizaa',
+        //     sayFolks : function (nama){
+        //         alert(`Hello ${nama}, welcome folks !`);
+        //     }
+        // }
+        // person.sayFolks('Padee');
+
+        // const person = {
+        //     nama : 'Oyii'
+        // }
+        // person.sayHello = function (name){
+        //     alert(`Hello guys ${name}`);
+        // }
+        // person.sayHello('Orizaaa');
+
+        //Getter dan Setter
+        const person = {
+            firstName : 'Rudi',
+            lastName : 'Irawan',
+            get fullName(){
+                return `${this.firstName} ${this.lastName}`;
+            },
+            set fullName(value){
+                const array = value.split(' ');
+                this.firstName = array[0];
+                this.lastName = array[1];
+            }
+        }
+        person.fullName = 'Oriza Sativa';
+        console.table(person);
+        
+        console.info(person.fullName);
+        
+
+        
+
+
+
+    </script> 
+</head>
+<body>
+    
+</body>
+</html>
